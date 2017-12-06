@@ -1,8 +1,13 @@
 package hakks.spring.demo.resource;
 
 import hakks.spring.demo.model.Tweet;
+import hakks.spring.demo.service.TwitterService;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+import javax.inject.Inject;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
@@ -16,16 +21,23 @@ import javax.ws.rs.core.Response;
 @Path("/twitter")
 public class TwitterResource {
 
+	private static final Logger LOG = LoggerFactory.getLogger(TwitterResource.class.getName());
+
+	private final TwitterService service;
+
+	@Inject
+	public TwitterResource(TwitterService service) {
+
+		this.service = service;
+	}
 
 	@GET
 	@Produces(MediaType.APPLICATION_JSON)
 	@Path("/hello")
 	public Response hello(){
 
-		Tweet tweet = new Tweet();
-		tweet.setMessage("Hello");
-		tweet.setUserName("Anders");
-
+		LOG.info("Hello Twitter Resource");
+		Tweet tweet = service.getLatestTweet();
 
 		return Response.ok(tweet).build();
 	}
