@@ -1,4 +1,4 @@
-package hakks.spring.demo.model;
+package beachen.spring.model;
 
 /**
  * @author Anders Strand

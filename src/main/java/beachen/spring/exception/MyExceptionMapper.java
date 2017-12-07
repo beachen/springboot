@@ -1,4 +1,4 @@
-package hakks.spring.demo.exception;
+package beachen.spring.exception;
 
 import javax.ws.rs.core.Response;
 import javax.ws.rs.ext.ExceptionMapper;

@@ -1,7 +1,5 @@
-package hakks.spring.demo;
+package beachen.spring;
 
-import hakks.spring.demo.resource.TwitterResource;
-import org.glassfish.jersey.server.ResourceConfig;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

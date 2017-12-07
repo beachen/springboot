@@ -1,4 +1,4 @@
-package hakks.spring.demo.filter;
+package beachen.spring.filter;
 
 import javax.ws.rs.container.ContainerRequestContext;
 import javax.ws.rs.container.ContainerRequestFilter;

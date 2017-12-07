@@ -1,7 +1,7 @@
-package hakks.spring.demo.resource;
+package beachen.spring.resource;
 
-import hakks.spring.demo.model.Tweet;
-import hakks.spring.demo.service.TwitterService;
+import beachen.spring.model.Tweet;
+import beachen.spring.service.TwitterService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;

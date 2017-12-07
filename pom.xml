@@ -11,8 +11,7 @@
 	<name>springboot-rest</name>
 	<description>A minimalistic Spring Rest Application</description>
 
-	<!-- What is the purpose of this one?-->
-    <parent>
+	    <parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
 		<version>1.5.9.RELEASE</version>
@@ -35,7 +34,7 @@
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency> -->
 
-        <!-- JAX-RS-->
+        <!-- JAX-RS implementation-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-jersey</artifactId>

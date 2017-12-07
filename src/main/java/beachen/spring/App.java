@@ -1,8 +1,7 @@
-package hakks.spring.demo;
+package beachen.spring;
 
-import hakks.spring.demo.exception.MyExceptionMapper;
-import hakks.spring.demo.filter.LoggingFilter;
-import hakks.spring.demo.resource.TwitterResource;
+import beachen.spring.exception.MyExceptionMapper;
+import beachen.spring.filter.LoggingFilter;
 import org.glassfish.jersey.server.ResourceConfig;
 import org.springframework.stereotype.Component;
 
