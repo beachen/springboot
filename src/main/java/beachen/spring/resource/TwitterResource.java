@@ -7,7 +7,9 @@ import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
 
 import javax.inject.Inject;
+import javax.ws.rs.Consumes;
 import javax.ws.rs.GET;
+import javax.ws.rs.POST;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
@@ -37,6 +39,17 @@ public class TwitterResource {
 
 		LOG.info("Hello Twitter Resource");
 		Tweet tweet = service.getLatestTweet();
+
+		return Response.ok(tweet).build();
+	}
+	@POST
+	@Consumes(MediaType.APPLICATION_JSON)
+	@Produces(MediaType.APPLICATION_JSON)
+	@Path("/tweet")
+	public Response sendTweet(Tweet tweet){
+
+		LOG.info("Send tweet:" + tweet);
+
 
 		return Response.ok(tweet).build();
 	}

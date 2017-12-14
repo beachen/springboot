@@ -27,4 +27,13 @@ public class Tweet {
 
 		this.message = message;
 	}
+
+	@Override
+	public String toString() {
+
+		return "Tweet{" +
+			"userName='" + userName + '\'' +
+			", message='" + message + '\'' +
+			'}';
+	}
 }
