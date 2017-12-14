@@ -7,6 +7,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
 
 import javax.inject.Inject;
+import javax.validation.Valid;
 import javax.ws.rs.Consumes;
 import javax.ws.rs.GET;
 import javax.ws.rs.POST;
@@ -46,12 +47,16 @@ public class TwitterResource {
 	@Consumes(MediaType.APPLICATION_JSON)
 	@Produces(MediaType.APPLICATION_JSON)
 	@Path("/tweet")
-	public Response sendTweet(Tweet tweet){
+
+	public Response sendTweet(@Valid Tweet tweet){
+
 
 		LOG.info("Send tweet:" + tweet);
 
-
+		//throw new RuntimeException("De e knas!");
 		return Response.ok(tweet).build();
 	}
+
+
 
 }
